@@ -9,4 +9,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.29" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Events\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Events\" />
+  </ItemGroup>
 </Project>
