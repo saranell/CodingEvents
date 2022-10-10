@@ -5,12 +5,16 @@
 </p>
 
 @if (ViewBag.events.Count == 0)
-            {
-                <p>No events yet :(</p>
-            }
-
-<table>
+    {
+    <p>No events yet :(</p>
+    }
+    else
+    {
+<table class="table">
     <tr>
+        <th>
+            ID
+        </th>
         <th>
             Name
         </th>
@@ -18,11 +22,13 @@
             Description
         </th>
     </tr>
-    @foreach (KeyValuePair<string, string> evt in ViewBag.events)
-    {
+    @foreach (var evt in ViewBag.events)
+        {
         <tr>
-            <td>@evt.Key</td>
-            <td>@evt.Value</td>
+            <td>@evt.Id</td>
+            <td>@evt.Name</td>
+            <td>@evt.Description</td>
         </tr>
-    }
+        }
 </table>
+    }
