@@ -58,7 +58,7 @@ namespace CodingEvents.Controllers
             return Redirect("/Events");
         }
 
-        [HttpGet]
+        [HttpGet]//showing edit page
         [Route("Events/Edit/{eventId}")]
         public IActionResult Edit(int eventId)
         {
@@ -75,7 +75,7 @@ namespace CodingEvents.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost]//on edit page, sending data back
         [Route("Events/Edit")]
         public IActionResult SubmitEditEventForm(int eventId, string name, string description)
         {
